@@ -1,0 +1,34 @@
+<div class="questionPage row">
+	<div class="col-xs-2">
+	</div>
+
+	<div class="col-xs-8">
+		
+		<h3>by: {{model.author}}</h3>
+
+		<p class="bodyContent">{{model.answer}}</p>
+		<hr>
+	</div>
+
+	<div class="col-xs-2">
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-1">
+	</div>
+
+	<div class="col-xs-5">
+		{{new-answer addAnswer2="addAnswer3" question=model}}
+	</div>
+
+	<div class="commentDiv col-xs-4">
+		{{#each model.answers as |ans|}}
+			<hr>
+			<div class="indivComment">{{ans.author}} says: {{ans.answer}}</div>
+			<hr>
+		{{/each}}
+	</div>
+
+	<div class="col-xs-2">
+	</div>
+</div>
